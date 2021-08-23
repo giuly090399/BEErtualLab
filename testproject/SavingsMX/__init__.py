@@ -66,6 +66,24 @@ class Player(BasePlayer):
     AFORE6 = models.IntegerField(
         blank=True, initial=0, min=0, max=Constants.fixed_income
     )
+    AFORE7 = models.IntegerField(
+        blank=True, initial=0, min=0, max=Constants.fixed_income
+    )
+    AFORE8 = models.IntegerField(
+        blank=True, initial=0, min=0, max=Constants.fixed_income
+    )
+    AFORE9 = models.IntegerField(
+        blank=True, initial=0, min=0, max=Constants.fixed_income
+    )
+    AFORE10 = models.IntegerField(
+        blank=True, initial=0, min=0, max=Constants.fixed_income
+    )
+    AFORE11 = models.IntegerField(
+        blank=True, initial=0, min=0, max=Constants.fixed_income
+    )
+    AFORE12 = models.IntegerField(
+        blank=True, initial=0, min=0, max=Constants.fixed_income
+    )
 
 
 # FUNCTIONS
@@ -98,13 +116,16 @@ class TaskQuestions(Page):
     form_fields = ['CP1', 'CP2', 'CP3']
 
 
+class Ronda1(Page):
+    pass
+
+
 class Preference(Page):
     form_model = Player
     form_fields = ['Cond1', 'Cond2']
 
     def is_displayed(self):
         return self.id_in_group == 1
-        print('Grupo 1')
 
 
 class FirstTask(Page):
@@ -153,6 +174,10 @@ class JubFirstTask(Page):
             )
 
 
+class Ronda2(Page):
+    pass
+
+
 class Preference2(Page):
     form_model = Player
     form_fields = ['Cond1_2', 'Cond2_2']
@@ -164,7 +189,7 @@ class Preference2(Page):
 
 class SecTask(Page):
     form_model = Player
-    form_fields = ['AFORE1', 'AFORE2', 'AFORE3', 'AFORE4', 'AFORE5', 'AFORE6']
+    form_fields = ['AFORE7', 'AFORE8', 'AFORE9', 'AFORE10', 'AFORE11', 'AFORE12']
 
     def vars_for_template(self):
         if self.id_in_group == 2:
@@ -185,7 +210,7 @@ class SecTask(Page):
 
 class JubSecTask(Page):
     def vars_for_template(self):
-        Ahorro_acumulado_display = self.AFORE1 + self.AFORE2 + self.AFORE3 + self.AFORE4 + self.AFORE5 + self.AFORE6
+        Ahorro_acumulado_display = self.AFORE7 + self.AFORE8 + self.AFORE9 + self.AFORE10 + self.AFORE11 + self.AFORE12
         Consumo_medio = Ahorro_acumulado_display / Constants.ret_period
         if self.id_in_group == 2:
             grupo = 2
@@ -207,4 +232,4 @@ class JubSecTask(Page):
             )
 
 
-page_sequence = [Instructions, TaskQuestions, Preference, FirstTask, JubFirstTask, Preference2, SecTask, JubSecTask]
+page_sequence = [Instructions, TaskQuestions, Ronda1, Preference, FirstTask, JubFirstTask, Ronda2, Preference2, SecTask, JubSecTask]

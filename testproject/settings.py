@@ -4,7 +4,7 @@ import random
 SESSION_CONFIGS = [
     dict(
         name='Experimentos_BEErtual_Lab',
-        app_sequence=['SavingsMX', 'Adrian', 'Pablo', 'Otras'],
+        app_sequence=['Dictator_Dice', 'SavingsMX', 'Otras', 'Adrian', 'Pablo', 'Cooperacion', 'Sociodemo'],
         num_demo_participants=30,
     ),
 ]

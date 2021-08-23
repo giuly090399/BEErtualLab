@@ -20,8 +20,9 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     contribution = models.CurrencyField(
-        min=0, max=Constants.endowment, label="How much will you contribute?"
+        min=0, max=Constants.endowment, label="¿Cuánto contribuye usted a la generación futura?"
     )
+
 
 # PAGES
 class Instructions(Page):

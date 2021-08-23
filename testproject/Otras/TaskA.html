@@ -1,11 +1,30 @@
-{{ block title }}Survey{{ endblock }}
+{{ block title }}Aversión al riesgo, a la pérdida y a la ambigüedad{{ endblock }}
 {{ block content }}
 
     <p>
-        Please answer the following questions.
+        Por favor, contesta las siguientes preguntas.
     </p>
 
-    {{ formfields }}
+    <p>
+        <img src="{% static "testproject/RiskAversion.jpg" %}"/>
+        {{ formfield 'RP1' }}
+    </p>
+
+    <p>
+        <img src="{% static "testproject/LossAversion.jpg" %}"/>
+        {{ formfield 'RP2' }}
+    </p>
+
+    <p>
+        <img src="{% static "testproject/AmbiguityAversion.jpg" %}"/>
+        {{ formfield 'RP3' }}
+    </p>
+
+    <p>
+        <img src="{% static "testproject/IntertemporalChoice.jpg" %}"/>
+        {{ formfield 'RP4' }}
+    </p>
+
 
     {{ next_button }}
 
