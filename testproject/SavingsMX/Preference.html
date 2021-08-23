@@ -1,0 +1,37 @@
+{{ block title }}
+    Preferencia de condiciones
+{{ endblock }}
+
+{{ block content }}
+
+    Imagina que existen tres esquemas bajo los cuales puedes ahorrar:
+
+    <table style="width:100%">
+        <tr>
+            <th>Condición</th>
+            <th>Ventaja</th>
+            <th>Desventaja</th>
+        </tr>
+        <tr>
+            <td>Alto ahorro obligatorio</td>
+            <td>BLABLA</td>
+            <td>BLABLA</td>
+        </tr>
+        <tr>
+            <td>Medio ahorro obligatorio</td>
+            <td>BLABLA</td>
+            <td>BLABLA</td>
+        </tr>
+        <tr>
+            <td>Sin ahorro obligatorio</td>
+            <td>BLABLA</td>
+            <td>BLABLA</td>
+        </tr>
+    </table>
+
+    Por favor, contesta las siguientes preguntas con respecto a lo que consideras que te brindará mayor puntaje al contestarlo.
+
+    {{ formfields }}
+    <p>{{ next_button }}</p>
+
+{{ endblock }}

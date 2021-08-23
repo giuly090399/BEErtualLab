@@ -1,0 +1,49 @@
+{{ block title }}
+    Instrucciones
+{{ endblock }}
+
+{{ block content }}
+<div class="card bg-light m-3">
+
+    <div class="card-body">
+
+        <p>
+            La tarea de ahorro consta de cuatro pasos:
+        </p>
+        <p>
+            Se te presentarán a ti y a otras personas algunas condiciones
+            iniciales sobre sus ingresos (certeza / incertidumbre) y opciones de ahorro
+            (ahorro obligatorio alto / ahorro obligatorio bajo / no hay ahorro obligatorio).
+            Así como un consumo mínimo que debe satisfacerse cada periodo para sobrevivir.
+        </p>
+        <p>
+            Cuando te toca alguna opción de ahorro obligatorio se te retirará un porcentaje fijo de tu ingreso
+            mes con mes. Además de lo anterior, cada periodo puedes ahorrar voluntariamente o consumir lo que resta de tu ingreso.
+            Importante, solo recibirás ingresos durante seis períodos, luego vivirás de
+            tus ahorros (puede que estés vivo o no). Asimismo, existen dos formas de
+            ahorro: el ahorro de bolsillo te permitirá consumir ese dinero en el
+            próximo período inmediato, mientras que el ahorro AFORE solo te permitirá
+            consumirlo hasta que pases el sexto periodo.
+        </p>
+        <p>
+            Antes del primer juego habrá uno de prueba para que te familiarices, posterior a esta prueba, te pediremos que
+            clasifiques las opciones en orden de tu preferencia. Establecida esta etapa, comenzará el juego, esta vez con condiciones
+            asignadas tanto en el ingreso como el ahorro.
+        </p>
+        <p>
+            Terminado el juego, te presentaremos los resultados de esta etapa y pasarás al siguiente experimento.
+            Tu desempeño será valorado en "tokens", es decir, deberás decidir cuántos tokens ahorrar y cuántos consumir.
+            La tasa de conversión es de 123.00 pesos mexicanos por token.
+        </p>
+        <p>
+            ¡IMPORTANTE! Por cada periodo que consumas por debajo del mínimo, se realizará una penalización de 10 tokens a tu pago
+            final. Además, tu pago se basará aleatoriamente en una sola de las rondas que jugaste.
+        </p>
+        <p>
+            A continuación te presentaremos algunas preguntas para evaluar el entendimiento de la tarea, no podrás pasar a la
+            siguiente página hasta que estén correctamente contestadas.
+        </p>
+    </div>
+    {{ next_button }}
+</div>
+{{ endblock }}

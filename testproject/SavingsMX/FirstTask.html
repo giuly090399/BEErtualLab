@@ -1,0 +1,106 @@
+{{ block title }}
+    Periodo laboral Ronda 1
+{{ endblock }}
+
+{{ block content }}
+    <div class="row">
+        <div class="col-3 text-center border bg-white border-dark">
+            <br>
+            Periodos 1 a {{ Constants.lab_period }} <br>
+        </div>
+
+        <div class="col text-center border bg-white border-dark">
+            <br>
+            <td>
+                Ingreso:  {{ Constants.fixed_income }}
+            </td>
+            <br>
+        </div>
+
+        <div class="col text-center border bg-white border-dark">
+            <br>
+            <td>
+                {% if grupo == 1 %}
+                Condición: {{ esq_1 }}
+                {% else %}
+                Condición: {{ esq_2 }}
+                {% endif %}
+            </td><br>
+            <td>
+                Consumo requerido para subsistir: {{ Constants.min_consumption }}
+            </td>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-7 text-center border border-dark bg-white">
+            <p>
+            <div class = "row">
+                <div class = "col-8 text-center bg-white ">
+                    <br>
+                    <td>
+                        ¿Cuánto vas a ahorrar en el primer periodo? {{ formfield 'AFORE1' }}
+                    </td><br>
+                </div>
+                <div class = "col bg-white">
+                    <br> <br>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-8 text-center bg-white ">
+                    <br>
+                    <td>
+                        ¿Cuánto vas a ahorrar en el segundo periodo? {{ formfield 'AFORE2' }}
+                    </td><br>
+                </div>
+                <div class = "col bg-white">
+                    <br> <br>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-8 text-center bg-white ">
+                    <br>
+                    <td>
+                        ¿Cuánto vas a ahorrar en el tercer periodo? {{ formfield 'AFORE3' }}
+                    </td><br>
+                </div>
+                <div class = "col bg-white">
+                    <br> <br>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-8 text-center bg-white ">
+                    <br>
+                    <td>
+                        ¿Cuánto vas a ahorrar en el cuarto periodo? {{ formfield 'AFORE4' }}
+                    </td><br>
+                </div>
+                <div class = "col bg-white">
+                    <br> <br>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-8 text-center bg-white ">
+                    <br>
+                    <td>
+                        ¿Cuánto vas a ahorrar en el quinto periodo? {{ formfield 'AFORE5' }}
+                    </td><br>
+                </div>
+                <div class = "col bg-white">
+                    <br> <br>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-8 text-center bg-white ">
+                    <br>
+                    <td>
+                        ¿Cuánto vas a ahorrar en el sexto periodo? {{ formfield 'AFORE6' }}
+                    </td><br>
+                </div>
+                <div class = "col bg-white">
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>{{ next_button }}</p>
+{{ endblock }}

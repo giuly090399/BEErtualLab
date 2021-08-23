@@ -1,0 +1,34 @@
+{{ block title }}
+    Periodo de jubilación
+{{ endblock }}
+
+{{ block content }}
+    <div class="container">
+        <div class="row">
+            <div class="col text-center border border-dark bg-white">
+                Periodos 6 a 10
+                Ingreso: Sin ingreso
+            </div>
+            <div class="col text-center border border-dark bg-white">
+                <td>
+                    {% if grupo == 1 %}
+                    Condición: {{ esq_1 }}
+                    {% else %}
+                    Condición: {{ esq_2 }}
+                    {% endif %}
+                </td>
+            </div>
+            <div class="col text-center border border-dark bg-white">
+                Consumo requerido para subsistir: {{ Constants.min_consumption }}
+            </div>
+        </div>
+        <div class="row">
+            Tu ahorro acumulado durante 6 periodos fue de: {{Ahorro_acumulado_display}}
+            <br>
+            Por lo que tu consumo en los cuatro periodos siguientes será de:  {{Consumo_medio}}
+        </div>
+    </div>
+
+    <p>{{ next_button }}</p>
+
+{{ endblock }}
